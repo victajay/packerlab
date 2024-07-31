@@ -52,7 +52,6 @@ jobs:
       azureSubscription: 'paygsub(545a7b1a-0425-4cf0-95ac-825c1e4130e8)'
       templatePath: 'templates/rds/PackerTemplate-WindowsAzure.pkr.hcl'
       command: 'build'
-      variables-file: 'templates/rds/PackerVariables-Windows11Enterprise.pkr.hcl'
 
   - task: ExtractFiles@1
     displayName: 'Extract report archive'
