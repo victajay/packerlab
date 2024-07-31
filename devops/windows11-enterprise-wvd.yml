@@ -50,7 +50,7 @@ jobs:
     inputs:
       connectedServiceType: 'azure'
       azureSubscription: 'paygsub(545a7b1a-0425-4cf0-95ac-825c1e4130e8)'
-      templatePath: 'templates/rds/PackerTemplate-WindowsAzure.pkr.hcl'
+      templatePath: 'templates/rds/packertests/Windows-Azure.pkr.hcl'
       command: 'build'
 
   - task: ExtractFiles@1
