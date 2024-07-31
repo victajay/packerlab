@@ -15,7 +15,7 @@ resources:
   repositories:
   - repository: packer
     type: github
-    name: victajay/packer-demo
+    name: victajay/packer-lab
     endpoint: victajay
 
 trigger:
