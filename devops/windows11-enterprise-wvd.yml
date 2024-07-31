@@ -18,6 +18,13 @@ resources:
     name: victajay/packerlab
     endpoint: victajay
 
+variables:
+  subscription_id: "$(subscription_id)"
+  tenant_id: "$(tenant_id)"
+  client_id: "$(client_id)"
+  client_secret: "$(client_secret)"
+
+
 trigger:
 - none
 
@@ -42,7 +49,7 @@ jobs:
       connectedServiceType: 'azure'
       azureSubscription: 'paygsub(545a7b1a-0425-4cf0-95ac-825c1e4130e8)'
       templatePath: 'templates/packertests/Windows-Azure.pkr.hcl'
-      command: 'build'
+      command: 'validate'
 
 
   - task: Packer@1
