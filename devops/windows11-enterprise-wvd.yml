@@ -40,15 +40,16 @@ jobs:
     displayName: 'Validate Packer template'
     inputs:
       connectedServiceType: 'azure'
-      azureSubscription: 'azure-spn'
+      azureSubscription: 'paygsub(545a7b1a-0425-4cf0-95ac-825c1e4130e8)'
       templatePath: 'templates/rds/packertests/Windows-Azure.pkr.hcl'
+      command: 'build'
 
 
   - task: Packer@1
     displayName: 'Build Packer template'
     inputs:
       connectedServiceType: 'azure'
-      azureSubscription: '545a7b1a-0425-4cf0-95ac-825c1e4130e8'
+      azureSubscription: 'paygsub(545a7b1a-0425-4cf0-95ac-825c1e4130e8)'
       templatePath: 'templates/rds/PackerTemplate-WindowsAzure.pkr.hcl'
       command: 'build'
       variables-file: 'templates/rds/PackerVariables-Windows11Enterprise.pkr.hcl'
