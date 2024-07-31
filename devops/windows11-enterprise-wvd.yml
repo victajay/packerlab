@@ -15,7 +15,7 @@ resources:
   repositories:
   - repository: packer
     type: github
-    name: victajay/packer-lab
+    name: victajay/packerlab
     endpoint: victajay
 
 trigger:
@@ -40,10 +40,9 @@ jobs:
     displayName: 'Validate Packer template'
     inputs:
       connectedServiceType: 'azure'
-      azureSubscription: '545a7b1a-0425-4cf0-95ac-825c1e4130e8'
-      templatePath: 'templates/rds/PackerTemplate-WindowsAzure.pkr.hcl'
-      command: 'validate'
-      variables-file: 'templates/rds/PackerVariables-Windows11Enterprise.pkr.hcl'
+      azureSubscription: 'azure-spn'
+      templatePath: 'templates/rds/packertests/Windows-Azure.pkr.hcl'
+
 
   - task: Packer@1
     displayName: 'Build Packer template'
